@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background-image: url(/assets/imagenes/bg-fel-internacional.png);
+    width: 100%;
+    display: flex;
+    flex-direction: column; /*permite mostrar en una sola columna nav, main, footer*/
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto; /*es necesario para poder centrar la pagina*/
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 110px;
+    background-color: rgb(255, 180, 0);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0px 6px 16px 0 rgba(0, 0, 0, 0.6);
+}
+.header-envios{
+    font-size: large;
+    padding: 5px 0px 5px;
+    color: rgb(243, 236, 236);
+    background-color: rgb(244, 19, 64);
+    text-align: center;
+    justify-content: center;
+}
+.header-envios-registro{
+    padding: 5px 0px 5px;
+}
+.header-nav{
+    display: flex;
+    height: 82px;
+    justify-content: space-evenly;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-toggle{
+    display: none; /*oculta checkbox*/
+}
+.menu-toggle-icon{
+    display: none;
+    position: absolute;
+    left: 20px;  
+}
+.menu-mobile{
+    display:none;
+    flex-direction: column;
+    background-color: rgb(255, 180, 0);
+    width: auto;
+    position: absolute;
+    left:0;
+    top:100px;
+}
+.menu-toggle:checked~.menu-mobile{
+    display: flex;
+}
+#logo{
+    width: 40px;
+}
+#logo:hover{
+    transform: rotate(360deg);
+    transition: 1s; 
+}
+#nav-logo-nombre-libreria{
+    font-size: 18px;
+    align-content: center;
+    margin: 0px 30px 0px 5px;
+}
+.nav-logo{
+    display:flex;
+    flex-direction: row;
+}
+main{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /*permite mostrar en una sola columna nav, main, footer*/
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto; /*es necesario para poder centrar la pagina*/
+}
+.banner-main{
+    margin: 20px;
+    width: 80vw;
+    padding-bottom: 40px;
+    border-bottom: solid 2px rgb(150, 150, 150);
+}
+.container{
+    width: 100vw;
+    display: flex;
+    justify-content: center; /*las portadas se ubican de izq a der 4 por fila*/
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
+.books-grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-row: repeat(3,1fr);
+    gap: 50px;
+}
+.container-cards{
+    gap: 50px;
+}
+.img-cards{
+    width: 200px;
+    height: 300px;
+    gap: 50px;
+    box-shadow: 16px 16px 16px 0px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+div a img:hover{
+    transform: scale(1.15);
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    align-content: center;
+    margin-top: 50px;
+    background-color: rgb(255, 180, 0);
+}
+.footer{
+    display:flex;
+    height: 62px;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+footer div ul li{
+    list-style-type: none;
+}
+footer img{
+    width: 30px;
+}
+.menu-container {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu-btn, .home {/*boton categoria para desplegar submenu*/
+    background-color: rgb(255, 180, 0);
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menu { /*submenu desplegable  al presionar categoria*/
+    background-color: rgb(255, 180, 0);
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    border-bottom: 1px solid white;
+    background-color: rgb(255, 180, 0);
+    margin: 10px 0px 10px;
+    padding: 10px;
+    text-align: center;
+} 
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:white;
+}
+button:hover{
+    color:white;
+}
+.menu, li:last-child {
+    border-bottom: none;
+}
+
+.derechos{
+    display: flex;
+    justify-content: center;
+}
+.footer-list-derechos{
+    display: flex;
+    justify-content: center;
+    direction: row;
+    list-style-type: none;
+    gap: 15px;
+}
+.container-maps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 25px;
+    color:rgb(156, 71, 71);
+}
+.maps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    gap: 30px;
+}
+.maps:hover{
+    background-color: rgb(224, 223, 223);
+    opacity: .9;
+    border-radius: 10px;
+}
+#detalle{
+    margin: 30px;
+    font-size: 20px;
+}
+
+.biblioteca{
+    width: 80%;
+    display: flex;
+    justify-content: left; /*las portadas se ubican de izq a der 4 por fila*/
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10vh;
+}
+.portada{
+    width: 200px;
+    height: 300px;
+    box-shadow: 16px 16px 16px 0px rgba(0, 0, 0, 0.6);
+    border-radius: 0%; /*saque borde redondeado*/
+    transition: transform 0.3s ease;
+}
+.portada:hover{
+    transform: scale(1.2);
+}
+
+.titulo{
+    margin: 3vw;
+}
+.link-descarga:hover,.link-compra:hover{
+    color:rgb(255, 180, 0);
+}
+
+.conteiner-libro{
+    margin:10vh 20vw;
+    justify-content: center;
+    text-align: center;
+    max-width: 80vw;
+}
+
+
+@media (max-width: 960px){
+    .menu-escritorio{
+        display: none;
+    }
+    .menu-toggle-icon{
+        display: block;
+    }
+}
+@media screen and (min-width:760px) and (max-width:960px){
+    .books-grid{
+        grid-template-columns: repeat(3,1fr);
+        grid-row: repeat(5,1fr);
+    }
+}
+@media screen and (max-width:760px){
+    .books-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .maps{
+        flex-direction: column;
+    }
+}
+
+.form-content{
+    border-radius: 15px;
+    width: 500px;
+    background-color: rgb(202, 202, 202);
+    margin-top: 20px;
+    padding: 20px 50px;
+}
+.error{
+    color:red;
+    margin-bottom: 5px;
+}
+.titulo-registro{
+    text-align: center;
+    font-family:"Roboto Flex", sans-serif;
+    font-size: 30px;
+    padding: 100px 0 20xp 0;
+    margin: 20px 0px 20px 0px;
+}
+form label, #genero{
+    position: relative;
+    font-size: 16px;
+    font-family:"Roboto Flex", sans-serif;
+    font-weight:500;
+    color: rgb(52, 51, 51);
+}
+form input, select, option, fieldset{
+    width: 100%;
+    font-size: 16px;
+    font-family:"Roboto Flex", sans-serif;
+    margin: 10px 30px 10px 0px;
+    padding: 10px 16px;
+    border: solid 1px rgb(255, 180, 0);
+    border-radius: 25px;
+}
+leyend{
+    color: red;
+    font-size: 16px;
+    font-family:"Roboto Flex", sans-serif;
+}
+fieldset{
+    
+    background-color: white;
+}
+.radio{
+    width:auto;
+}
+textarea{
+    margin-top: 5px;
+    font-family:"Roboto Flex", sans-serif;
+    width: 100%;
+    border: solid 1px rgb(255, 180, 0);
+}
+.form-buttons{
+    text-align: center;
+}
+.boton-enviar{
+    margin: 0px 10px;
+    font-family: "Roboto-flex", sans-serif;
+    font-weight:bold;
+    background-color: rgb(52, 183, 52);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 0px 10px 0px;
+    width: 150px;
+}
+.boton-enviar:hover{
+    background-color: rgb(28, 91, 28);
+}
+.boton-reset{
+    margin: 0px 10px;
+    font-family: "Roboto-flex", sans-serif;
+    font-weight:bold;
+    background-color: rgb(252, 1, 1);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 0px 10px 0px;
+    width: 150px;
+}
+.boton-reset:hover{
+    background-color: rgb(137, 3, 3);
+}
+.radio{
+    margin: 0px 5px 30px 20px;
+}
+#cumple, #provincias{
+    color:grey;
+}
+/* estilos errores en completar formulario */
+ .error{
+    color:red;
+    margin-bottom: 5px;
+ }
+
+input.error, .form-select.error, span.error, select.error{
+    border: 2px solid red;
+ }
+
+select.error{
+    border: 2px solid red;
+ }
+
+ .unido{
+    display: none;
+ }
